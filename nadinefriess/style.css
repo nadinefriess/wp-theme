@@ -1,0 +1,326 @@
+/*
+Theme Name: Blogstyles
+Description: Dies sind Styles zu meinem Blog.
+Author: Nadine Friess
+*/
+
+@import url('bootstrap/css/bootstrap.min.css');
+
+/************************* IDs und Klassen zu Testzwecken ***************************/
+/*
+    #navibereich{background-color: lightblue;}
+    #mottobereich{background-color: grey;}
+    #beitraege{background-color: lightgreen;}
+    #diabereich{background-color: lightcoral;}
+    #logo{background-color: lightpink;}
+    #seitenleiste{background-color: lightgoldenrodyellow;}
+    .carousel-diatext{background-color: lavenderblush;}
+    .carousel-dia{background-color: lightsalmon;}*/
+
+/************************* Schriften ***************************/
+/*
+    Die Schrifen müssen noch eingebunden werden.
+
+    @font-face{
+        font-family: 'GreatVibes';
+        src: url('GreatVibes-Regular.eot');
+        src: url('GreatVibes-Regular.eot?iefix') format('eot')
+    }
+    @font-face{
+        font-family: 'DroidSerif';
+        src: url('DroidSerif.eot');
+        src: url('DroidSerif.eot?iefix') format('eot'),
+            url('DroidSerif.woff') format('woff'),
+            url('DroidSerif.ttf') format('truetype'),
+            url('DroidSerif.svg#DroidSerif') format('svg');
+    }
+*/
+
+/************************* Standart-Tags ***************************/
+body{
+
+    color: 	#888;
+}
+h1{
+    font-family: 'GreatVibes-Regular';
+    font-size: 4em;
+}
+h3>a,h3,h2{
+    font-family: 'DroidSerif';
+}
+h1>a,h2,h3>a{
+    color: black;
+}
+.navi-punkte>a{
+    color: #888;
+}
+.diatitel>h3>a:hover,.diatitel>h3>a:focus{
+    color: #f13b76;
+}
+.beitragstitel>h3>a:hover,.beitragstitel>h3>a:focus{
+    color: #fac200;
+}
+h3#kategorien-titel, h3#archiv-titel ,.kat-beitragstitel>h3{
+    color: black;
+}
+a{
+    color: #444;
+}
+a:hover, a:focus {
+    text-decoration: none;
+    color: #38b2ce;
+}
+ul,li{
+    list-style: none;
+    padding-left: 0;
+}
+
+/************************* Header ***************************/
+#navi{						 /*Dieses div ist nur für's richtig floaten der li-Elemente zuständig!*/
+    float: right;
+}
+.navi-punkte{				 /*Die li-Elemente floaten dabei immer left für die richtige Anordnung der Navi-Punkte.*/
+    float: left;
+    margin-left: 1em;		 /*Richtige Ausrichtung am Rand.*/
+}
+.navi-punkte>a>img{
+    height: 20px;
+    width: 20px;
+    //opacity: 0.6;
+}
+.counter
+{
+    color: skyblue;
+}
+div.tooltip-inner a{
+    color: white;
+}
+div.tooltip-inner a:hover{
+    color: skyblue;
+}
+#navibereich{
+    margin-top: 2.2em;
+}
+
+/************************* Zwischenelement ***************************/
+.linie{
+    border-top : 1px lightgrey solid;
+    margin-left: 1em;
+    margin-right: 1em
+}
+
+/************************* Diainhalt ***************************/
+#diabereich{
+    margin-bottom: 1em;
+    margin-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+div.carousel-dia{
+    padding-left: 0;
+}
+ul.diatext{
+    padding-left: 0;
+}
+#slide-controls{
+    text-align: right;
+    position: absolute;
+    bottom: 0em;
+    padding-right: 1.5em;
+
+}
+a.right{
+    margin-left: 1.5em;
+    padding-left: 1em;
+}
+.carousel-control.right, .carousel-control.left{
+    top:auto;
+    position:static;
+    padding-top: 0.3em;
+    background-image: none;
+    text-shadow: none;
+}
+.glyphicon:empty {
+    width: 0;
+    color: #888;
+}
+.glyphicon:hover{
+    color: black
+}
+
+/************************* Inhalt oder Beitragsübersicht ***************************/
+#beitraege{
+    padding: 0;
+    padding-bottom: 1em;
+}
+.thumb{
+    padding-top: 1.3em;
+}
+
+/************************* Seitenleiste ***************************/
+#suche{
+    display: none;
+}
+#seitenleiste{
+    padding-top: 1.7em;
+    padding-bottom: 1em;
+}
+#suchbtn{
+    padding-bottom: 7px;
+}
+#kategorien-bereich{
+    text-align: center;
+}
+
+/************************* Einzelne Seiten ***************************/
+#blogpost,#sitepost,#textbereich{
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+}
+
+/************************* Footer ***************************/
+#footer{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+    position:relative;
+}
+#fussbereich {
+    position:relative;
+    bottom:0;
+}
+
+#anmeldung>a{
+    color: #888;
+}
+/************************* Watt soll ich tun ***************************/
+form#myForm{
+    width: 100%;
+    min-width: 300px;
+    max-width: 400px;
+}
+#ueber{
+    padding-top: 1em;
+}
+/************************* Pagination ***************************/
+/*
+    Pagination dem Inhaltsbereich muss noch implementiert werden.
+*/
+
+
+/************************* Media Queries ***************************/
+/*
+   Ab 768px floaten die Navi-Box left.
+   Das Grid-System Small beginnt bei >= 768px
+   Das iPad (Auflösung: 1024x768) soll im Hochformat die Small ansicht beibehalten
+   (die Navi soll nicht bei 768px daher nicht floaten).
+*/
+
+/* Tablet */
+@media (max-width: 991px)
+{
+    /************************* Über ***************************/
+    #ueber{
+        padding-top: 0em;
+    }
+}
+/* Smartphone */
+@media (max-width: 767px) {
+    /************************* Zwischenelemente ***************************/
+    .linie-xs{
+        border-top : 1px lightgrey solid;
+    }
+    a:hover, a:focus {
+        text-decoration: none;
+    }
+
+    /************************* Navigation ***************************/
+    #navi{
+        float: left;
+    }
+    #navi-rechts{
+        float:right;
+    }
+    .navi-punkte{
+        width: 25px;
+        height: 15px;
+    }
+    #navibereich{
+        padding: 0;
+    }
+    .navi-punkte>a>img{
+        height: 16px;
+        width: 16px;
+    }
+    #suche{
+        display: none;
+        padding: 1em;
+    }
+    #kategorien, #archiv{
+        display: none;
+        padding: 1em;
+    }
+
+    /************************* Versteckte Elemente ***************************/
+    #kategorien>h3, #archiv>h3{
+        margin: 0;
+        margin-bottom: 0.5em;
+    }
+    input#s.form-control{
+        width: 100%;
+    }
+    .iconline{
+        display: none;
+    }
+
+    /************************* Diabereich ***************************/
+
+    div.carousel-dia {
+        padding-right: 0;
+    }
+    #slide-controls{
+        position: relative;
+        text-align: center;
+
+        /*  z-index verursacht, dass die slideicons hinter dem Dia verschwinden.
+            Sind diese davor, so ist der Titel nicht mehr auswählbar.
+
+            text-align: center;
+            top: 3em;
+            bottom: 0;
+            padding-right: 1em;
+            z-index:-1;*/
+    }
+
+    .carousel-diatext{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    a.right{
+        margin-left: 25%;
+    }
+    .glyphicon:empty {
+        width: 16px;
+        height: 16px;
+    }
+    /************************* Über ***************************/
+    #ich{
+        margin-left: 15%;
+    }
+    #ueber{
+        padding-top: 1em;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+/* Großer Monitor */
+@media (max-width: 1200px) {
+
+}
+
+/*
+Weitere media queries nach bedarf einblenden:
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { ... }
+*/
