@@ -1,8 +1,6 @@
-
 <?php get_header(); ?>
 
 <div class="linie"></div>
-
 
 <div id="mottobereich" class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

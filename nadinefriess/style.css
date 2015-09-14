@@ -38,7 +38,6 @@ Author: Nadine Friess
 
 /************************* Standart-Tags ***************************/
 body{
-
     color: 	#888;
 }
 h1{
@@ -166,7 +165,7 @@ a.right{
     padding-bottom: 1em;
 }
 #suchbtn{
-    padding-bottom: 7px;
+    padding-bottom: 6px;
 }
 #kategorien-bereich{
     text-align: center;
@@ -307,6 +306,7 @@ form#myForm{
     /************************* Über ***************************/
     #ich{
         margin-left: 15%;
+        display: none;
     }
     #ueber{
         padding-top: 1em;
@@ -317,6 +317,12 @@ form#myForm{
 /* Großer Monitor */
 @media (max-width: 1200px) {
 
+}
+
+@media (min-width: 1200px){
+    .container {
+        width: 1024px;
+    }
 }
 
 /*

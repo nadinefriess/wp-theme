@@ -39,35 +39,32 @@
                     <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
                 </div>
 
-                <!-- Navigationsbereich für Geräte ab 767px Breite -->
+                <!-- Navigationsbereich für Geräte ab 767px Breite-->
                 <div id="navibereich" class="hidden-xs col-xs-12 col-sm-6 col-md-5 col-lg-4">
                     <ul id="navi">
-                        <li class="navi-punkte"><a href="<?php bloginfo('url'); ?>">
-                                Startseite
-                            </a>
-                        </li>
+                        <li class="navi-punkte"><a href="<?php bloginfo('url'); ?>">Startseite</a></li>
                         <li class="navi-punkte">
                             <a class="sub-navi hastooltip" href="#" rel="tooltip-2" data-placement="bottom" data-toggle="tooltip"
                                data-trigger="click" data-html="true" title="<?php wp_get_archives(array('type' => 'monthly', 'limit' => 6)); ?>">
                                 Archiv
                             </a>
                         </li>
-                        <li class="navi-punkte"><a href="
-                            <?php
+                        <li class="navi-punkte">
+                            <a href="<?php
                             $id = 2;
                             echo get_page_link($id);
                             ?>">
                                 &Uuml;ber
                             </a>
                         </li>
-                        <!-- <li class="navi-punkte counter">
-                        <?php
-                        //Plugin: count per day
-                        global $count_per_day;
-                        if (method_exists($count_per_day, "show"))
-                            echo "\n" . $count_per_day->getUserAll($return) . " Besucher";
-                        ?>
-                        </li>-->
+                        <li class="navi-punkte counter">
+                            <?php
+                            //Plugin: count per day
+                            global $count_per_day;
+                            if (method_exists($count_per_day, "show"))
+                                echo "\n" . $count_per_day->getUserAll($return) . " Besucher";
+                            ?>
+                        </li>
                     </ul>
                 </div>
 
